@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "test:ts": "tsc --noEmit cleanse.d.ts",
-    "start": "babel-node index.js"
+    "start": "babel-node main.js"
   },
   "keywords": [],
   "author": "",
