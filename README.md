@@ -1,6 +1,5 @@
-# Interview code challange
-Solution to the code challenge for the `company` interview.
-If you're wondering what the `package.json` is for
+# Code Challenge
+Solution to the code challenge.
 
 <!-- toc -->
 
