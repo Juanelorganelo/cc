@@ -1,6 +1,6 @@
 export default function cleanse(o) {
   return map(coalesce(o), (v) =>
-    isNumeric(v) ? Number(v) : typeof v === "object" ? cleanse(v) : v
+    isNumeric(v) ? Number(v) : isObject(v) ? cleanse(v) : v
   );
 }
 
@@ -22,8 +22,11 @@ function coalesce(value) {
       );
 }
 
-const NUMBER_PATTERN = /^(\-|\+)?\d+(\.\d+)?$/;
+function isObject(o) {
+  return o && typeof o === 'object';
+}
 
 function isNumeric(s) {
-  return typeof s === "string" && NUMBER_PATTERN.test(s);
+  return typeof s === "string" && !Number.isNaN(Number(s));
 }
+
